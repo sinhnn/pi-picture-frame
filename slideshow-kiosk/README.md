@@ -21,6 +21,7 @@ Files
 
 Installation
 ============
+
 Web  slideshow
 --------------
 Most flexible and heaviest, requires window manager
@@ -28,6 +29,7 @@ Most flexible and heaviest, requires window manager
 echo "xinit /path/to/script &" >> /etc/profile # auto start script after boot
 ```
 2. Edit script to point your website
+
 Feh slideshow
 -------------
 Lightweight, but no transition effect, requires window manager
