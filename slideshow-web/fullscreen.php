@@ -6,7 +6,7 @@
     <title>SiSLab slideshow </title>
     <meta name="description" content="SiSLab slideshow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="refresh" content="3600">
+    <meta http-equiv="refresh" content="1800">
 
 
 
@@ -72,13 +72,48 @@
         .camera_overlayer {
             opacity: .1;
         }
+        #forecast {
+            display: block;       /* iframes are inline by default */
+            background:  none;
+            border: none;         /* Reset default border */
+            width: 50%;
+            height: 50%;
+            align: middle;
+            -ms-zoom: 2;
+            -moz-transform: scale(2);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(2);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(2);
+            -webkit-transform-origin: 0 0;
+        }
+        #gcalendar {
+            display: block;       /* iframes are inline by default */
+            background:  none;
+            border: none;         /* Reset default border */
+            width: 50%;
+            height: 50%;
+            align: bottom;
+            -ms-zoom: 2;
+            -moz-transform: scale(2);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(2);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(2);
+            -webkit-transform-origin: 0 0;
+        }
+		
         iframe {
             display: block;       /* iframes are inline by default */
             background:  none;
             border: none;         /* Reset default border */
-            height: 90vh;        /* Viewport-relative units */
-            width: 100vw;
+            width: 100%;
+            height: 100%;
+            align: bottom;
+
+  
         }
+
     </style>
 
     <!--///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,6 +134,7 @@
                 loader: 'none',
                 pagination: false,
                 thumbnails: false,
+		fx: 'simpleFade', // For low performance computer
                 hover: false,
                 opacityOnGrid: false,
                 imagePath: 'images/',
@@ -116,14 +152,14 @@
     <div class="fluid_container">
         <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
 
-            <div data-src="images/blank.gif">
-                <iframe src="http://forecast.io/embed/#lat=21.0277&lon=105.8499&name=Hoan%20Kiem%20Ha%20Noi&color=#00aaff&font=Georgia&units=ca"></iframe>
+            <div  data-src="images/blank.gif" >
+                <iframe id="forecast" src="http://forecast.io/embed/#lat=21.0277&lon=105.8499&name=Hoan%20Kiem%20Ha%20Noi&color=#00aaff&font=Georgia&units=ca" ></iframe>
                 <div class='camera_caption fadeFromBottom'>
                     SiSLab Gallery 1 @snn
                 </div>
             </div>
-            <div data-src="images/blank.gif">
-                <iframe src="https://www.google.com/calendar/embed?src=tranxuantu%40gmail.com&amp;ctz=Asia/Saigon"></iframe>
+           <div data-src="images/blank.gif">
+                <iframe id="gcalendar" src="https://www.google.com/calendar/embed?src=tranxuantu%40gmail.com&amp;ctz=Asia/Saigon"></iframe>
                 <div class='camera_caption fadeFromBottom'>
                      Calendar @snn
                 </div>
