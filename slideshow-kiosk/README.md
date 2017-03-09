@@ -25,18 +25,21 @@ Installation
 Web  slideshow
 --------------
 Most flexible and heaviest, requires window manager
+```
 	1. echo "xinit /path/to/script &" >> /etc/profile" # auto start script after boot
 	2. Edit script to point your website
-
+```
 Feh slideshow
 -------------
 Lightweight, but no transition effect, requires window manager
+```
 	1. echo "xinit /path/to/script &" >> /etc/profile # auto start script after boot
 	2. Edit script to point your image folder
-
+```
 Fbi slideshow
 -------------
 Simplest, no window manager requirement.
+```
 	1. echo "/path/to/script &" >> /etc/profile # auto start script after boot
 	2. Edit script to point your image folder
-
+```
